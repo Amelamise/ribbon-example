@@ -1,0 +1,28 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"        
+        xmlns:Example="clr-namespace:Ribbon_Example"        
+        x:Class="Ribbon_Example.MainWindow"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+      <Ribbon>         
+         <Ribbon.ApplicationMenu>
+            <RibbonApplicationMenu>
+               <RibbonApplicationMenu.Resources>
+                  <Example:NegativeIntegerConverter x:Key="NegativeIntegerConverter" />
+                  
+                  <Style TargetType="Popup">
+                     <Setter Property="Placement" Value="Right" />                     
+                  </Style>
+               </RibbonApplicationMenu.Resources>
+               
+               <RibbonApplicationMenuItem Header="New..." />
+               <RibbonApplicationMenuItem Header="Open..." />
+               <RibbonApplicationMenuItem Header="Close" />
+               <RibbonApplicationMenuItem Header="Save" />
+               <RibbonApplicationMenuItem Header="Save As..." />               
+            </RibbonApplicationMenu>
+         </Ribbon.ApplicationMenu>
+      </Ribbon>
+    </Grid>
+</Window>
